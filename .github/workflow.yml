@@ -1,0 +1,43 @@
+# Build Sphinx docs and push to gh-pages branch.
+#
+# A gh-pages branch must exist for the current repository.  This can be created
+# with a .nojekyll file with the following commands:
+#   git checkout --orphan gh-pages
+#   touch .nojekyll
+#   git add .nojekyll
+#   git commit .nojekyll -m 'Add .nojekyll to gh-pages branch'
+#   git push -u origin gh-pages
+
+name: build-sphinx-gh-pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 1
+      - name: Build Sphinx docs
+        run: make html
+      - name: Commit documentation changes
+        run: |
+          git clone https://github.com/${{ github.repository }}.git --branch gh-pages --single-branch gh-pages
+          cp -r _build/html/* gh-pages/
+          cd gh-pages
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update documentation" -a || true
+          # The above command will fail if no changes were present, so we ignore
+          # the return code.
+      - name: Push gh-pages changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
