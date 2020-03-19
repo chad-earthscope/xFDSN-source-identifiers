@@ -27,24 +27,16 @@ jobs:
           sudo apt-get install python3-pip latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
           sudo pip3 install sphinx
       - name: Build Sphinx docs
-        run: |
-          ls -l
-          pwd
-          sphinx-build --version
-          make html latexpdf
+        run: make html latexpdf
       - name: Fetch gh-pages branch
         uses: actions/checkout@v2
         with:
           ref: gh-pages
           path: ${{ env.GH_PAGES_CHECKOUT }}
           clean: false
-      - name: Show environment
-        run: |
-          ls -l
-          pwd
-          sphinx-build --version
       - name: Commit documentation changes to gh-pages branch
         run: |
+          # Copy built HTML and PDF to gh-pages destination
           cp -r _build/html/* ${{ env.GH_PAGES_CHECKOUT }}/
           cp _build/latex/xfdsnsourceidentifiers.pdf ${{ env.GH_PAGES_CHECKOUT }}/
           cd ${{ env.GH_PAGES_CHECKOUT }}
@@ -53,7 +45,7 @@ jobs:
           git add .
           git commit -m "Update documentation" -a || true
           # The above command will fail if no changes were present, so we ignore the return code.
-      - name: Push gh-pages changes
+      - name: Push gh-pages branch changes
         uses: ad-m/github-push-action@master
         with:
           branch: gh-pages
