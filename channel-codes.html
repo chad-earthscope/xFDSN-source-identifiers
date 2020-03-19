@@ -1,26 +1,17 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Channel codes &#8212; Specification</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,47 +20,44 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Channel codes</a><ul>
-<li><a class="reference internal" href="#band-source-and-position-codes">Band, source and position codes</a></li>
-<li><a class="reference internal" href="#band-code">Band Code</a></li>
-<li><a class="reference internal" href="#source-and-position-codes">Source and Position Codes</a><ul>
-<li><a class="reference internal" href="#seismometer">Seismometer</a></li>
-<li><a class="reference internal" href="#tilt-meter">Tilt Meter</a></li>
-<li><a class="reference internal" href="#creep-meter">Creep Meter</a></li>
-<li><a class="reference internal" href="#calibration-input">Calibration Input</a></li>
-<li><a class="reference internal" href="#pressure">Pressure</a></li>
-<li><a class="reference internal" href="#electronic-test-point">Electronic Test Point</a></li>
-<li><a class="reference internal" href="#magnetometer">Magnetometer</a></li>
-<li><a class="reference internal" href="#humidity">Humidity</a></li>
-<li><a class="reference internal" href="#rotational-sensor">Rotational Sensor</a></li>
-<li><a class="reference internal" href="#temperature">Temperature</a></li>
-<li><a class="reference internal" href="#water-current">Water Current</a></li>
-<li><a class="reference internal" href="#geophone">Geophone</a></li>
-<li><a class="reference internal" href="#electric-potential">Electric Potential</a></li>
-<li><a class="reference internal" href="#rainfall">Rainfall</a></li>
-<li><a class="reference internal" href="#linear-strain">Linear Strain</a></li>
-<li><a class="reference internal" href="#tide">Tide</a></li>
-<li><a class="reference internal" href="#bolometer">Bolometer</a></li>
-<li><a class="reference internal" href="#volumetric-strain">Volumetric Strain</a></li>
-<li><a class="reference internal" href="#wind">Wind</a></li>
-<li><a class="reference internal" href="#derived-or-generated-channel">Derived or generated channel</a></li>
-<li><a class="reference internal" href="#non-specific-instruments">Non-specific instruments</a></li>
-<li><a class="reference internal" href="#synthesized-beams">Synthesized Beams</a></li>
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/FDSN-Logo-600w.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">xFDSN Source Identifiers</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="definition.html">Definition of identifiers</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Channel codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#band-source-and-position-codes">Band, source and position codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#band-code">Band Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-and-position-codes">Source and Position Codes</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
 </ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -79,27 +67,30 @@
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/channel-codes.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="channel-codes">
@@ -118,7 +109,7 @@ be empty.</p>
 The position codes are specific to sources. May be empty.</p>
 </div></blockquote>
 <p>A <em>channel</em> is the combination of these three codes separated by “_”
-(ASCII 95) in the following pattern: <code class="docutils literal"><span class="pre">band_source_position</span></code>, which
+(ASCII 95) in the following pattern: <code class="docutils literal notranslate"><span class="pre">band_source_position</span></code>, which
 forms the end of a source identifier.</p>
 <p>For usage of Band codes <strong>A</strong> and <strong>O</strong>, the source and position codes may
 be defined by the generator. In these cases, the source and position
@@ -128,8 +119,8 @@ used.</p>
 <p>Two sequences are reserved for special channels: <strong>L_O_G</strong> for the console
 log and the (deprecated) <strong>S_O_H</strong> for general state of health.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">All <em>channels</em> with single-character <em>band</em>, <em>source</em>, and
+<p class="admonition-title">Note</p>
+<p>All <em>channels</em> with single-character <em>band</em>, <em>source</em>, and
 <em>position</em> codes are equivalent to SEED 2.4 channel designations
 and vice versa.</p>
 </div>
@@ -138,110 +129,110 @@ and vice versa.</p>
 <h2>Band Code<a class="headerlink" href="#band-code" title="Permalink to this headline">¶</a></h2>
 <p>The band code specifies the general sampling rate and the approximate
 response band of the instrument (when applicable to the data source).</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="11%" />
-<col width="39%" />
-<col width="29%" />
-<col width="21%" />
+<col style="width: 11%" />
+<col style="width: 39%" />
+<col style="width: 29%" />
+<col style="width: 21%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Band code</th>
-<th class="head">Band type</th>
-<th class="head">Sample rate (Hz)</th>
-<th class="head">Lower bound (sec)</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Band code</p></th>
+<th class="head"><p>Band type</p></th>
+<th class="head"><p>Sample rate (Hz)</p></th>
+<th class="head"><p>Lower bound (sec)</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><strong>F</strong></td>
-<td>…</td>
-<td>&gt;= 1000 to &lt; 5000</td>
-<td>&gt;= 10 sec</td>
+<tbody>
+<tr class="row-even"><td><p><strong>F</strong></p></td>
+<td><p>…</p></td>
+<td><p>&gt;= 1000 to &lt; 5000</p></td>
+<td><p>&gt;= 10 sec</p></td>
 </tr>
-<tr class="row-odd"><td><strong>G</strong></td>
-<td>…</td>
-<td>&gt;= 1000 to &lt; 5000</td>
-<td>&lt; 10 sec</td>
+<tr class="row-odd"><td><p><strong>G</strong></p></td>
+<td><p>…</p></td>
+<td><p>&gt;= 1000 to &lt; 5000</p></td>
+<td><p>&lt; 10 sec</p></td>
 </tr>
-<tr class="row-even"><td><strong>D</strong></td>
-<td>…</td>
-<td>&gt;= 250 to &lt; 1000</td>
-<td>&lt; 10 sec</td>
+<tr class="row-even"><td><p><strong>D</strong></p></td>
+<td><p>…</p></td>
+<td><p>&gt;= 250 to &lt; 1000</p></td>
+<td><p>&lt; 10 sec</p></td>
 </tr>
-<tr class="row-odd"><td><strong>C</strong></td>
-<td>…</td>
-<td>&gt;= 250 to &lt; 1000</td>
-<td>&gt;= 10 sec</td>
+<tr class="row-odd"><td><p><strong>C</strong></p></td>
+<td><p>…</p></td>
+<td><p>&gt;= 250 to &lt; 1000</p></td>
+<td><p>&gt;= 10 sec</p></td>
 </tr>
-<tr class="row-even"><td><strong>E</strong></td>
-<td>Extremely Short Period</td>
-<td>&gt;= 80 to &lt; 250</td>
-<td>&lt; 10 sec</td>
+<tr class="row-even"><td><p><strong>E</strong></p></td>
+<td><p>Extremely Short Period</p></td>
+<td><p>&gt;= 80 to &lt; 250</p></td>
+<td><p>&lt; 10 sec</p></td>
 </tr>
-<tr class="row-odd"><td><strong>S</strong></td>
-<td>Short Period</td>
-<td>&gt;= 10 to &lt; 80</td>
-<td>&lt; 10 sec</td>
+<tr class="row-odd"><td><p><strong>S</strong></p></td>
+<td><p>Short Period</p></td>
+<td><p>&gt;= 10 to &lt; 80</p></td>
+<td><p>&lt; 10 sec</p></td>
 </tr>
-<tr class="row-even"><td><strong>H</strong></td>
-<td>High Broadband</td>
-<td>&gt;= 80 to &lt; 250</td>
-<td>&gt;= 10 sec</td>
+<tr class="row-even"><td><p><strong>H</strong></p></td>
+<td><p>High Broadband</p></td>
+<td><p>&gt;= 80 to &lt; 250</p></td>
+<td><p>&gt;= 10 sec</p></td>
 </tr>
-<tr class="row-odd"><td><strong>B</strong></td>
-<td>Broadband</td>
-<td>&gt;= 10 to &lt; 80</td>
-<td>&gt;= 10 sec</td>
+<tr class="row-odd"><td><p><strong>B</strong></p></td>
+<td><p>Broadband</p></td>
+<td><p>&gt;= 10 to &lt; 80</p></td>
+<td><p>&gt;= 10 sec</p></td>
 </tr>
-<tr class="row-even"><td><strong>M</strong></td>
-<td>Mid Period</td>
-<td>&gt; 1 to &lt; 10</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p><strong>M</strong></p></td>
+<td><p>Mid Period</p></td>
+<td><p>&gt; 1 to &lt; 10</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><strong>L</strong></td>
-<td>Long Period</td>
-<td>~ 1</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p><strong>L</strong></p></td>
+<td><p>Long Period</p></td>
+<td><p>~ 1</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><strong>V</strong></td>
-<td>Very Long Period</td>
-<td>~ 0.1</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p><strong>V</strong></p></td>
+<td><p>Very Long Period</p></td>
+<td><p>~ 0.1</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><strong>U</strong></td>
-<td>Ultra Long Period</td>
-<td>~ 0.01</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p><strong>U</strong></p></td>
+<td><p>Ultra Long Period</p></td>
+<td><p>~ 0.01</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><strong>R</strong></td>
-<td>Extremely Long Period</td>
-<td>&gt;= 0.0001 to &lt; 0.001</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p><strong>R</strong></p></td>
+<td><p>Extremely Long Period</p></td>
+<td><p>&gt;= 0.0001 to &lt; 0.001</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><strong>P</strong></td>
-<td>On the order of 0.1 to 1 day [1]</td>
-<td>&gt;= 0.00001 to &lt; 0.0001</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p><strong>P</strong></p></td>
+<td><p>On the order of 0.1 to 1 day [1]</p></td>
+<td><p>&gt;= 0.00001 to &lt; 0.0001</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><strong>T</strong></td>
-<td>On the order of 1 to 10 days [1]</td>
-<td>&gt;= 0.000001 to &lt; 0.00001</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p><strong>T</strong></p></td>
+<td><p>On the order of 1 to 10 days [1]</p></td>
+<td><p>&gt;= 0.000001 to &lt; 0.00001</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><strong>Q</strong></td>
-<td>Greater than 10 days [1]</td>
-<td>&lt; 0.000001</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p><strong>Q</strong></p></td>
+<td><p>Greater than 10 days [1]</p></td>
+<td><p>&lt; 0.000001</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><strong>A</strong></td>
-<td>Administrative Instrument Channel</td>
-<td>variable</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p><strong>A</strong></p></td>
+<td><p>Administrative Instrument Channel</p></td>
+<td><p>variable</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><strong>O</strong></td>
-<td>Opaque Instrument Channel</td>
-<td>variable</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p><strong>O</strong></p></td>
+<td><p>Opaque Instrument Channel</p></td>
+<td><p>variable</p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -268,55 +259,55 @@ is consulted.</p>
 <div><p>Measures displacement/velocity/acceleration along a line defined by
 the the dip and azimuth.</p>
 <p><em>Source Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="19%" />
-<col width="81%" />
+<col style="width: 19%" />
+<col style="width: 81%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>H</strong></td>
-<td>High Gain Seismometer</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>H</strong></p></td>
+<td><p>High Gain Seismometer</p></td>
 </tr>
-<tr class="row-even"><td><strong>L</strong></td>
-<td>Low Gain Seismometer</td>
+<tr class="row-even"><td><p><strong>L</strong></p></td>
+<td><p>Low Gain Seismometer</p></td>
 </tr>
-<tr class="row-odd"><td><strong>G</strong></td>
-<td>Gravimeter</td>
+<tr class="row-odd"><td><p><strong>G</strong></p></td>
+<td><p>Gravimeter</p></td>
 </tr>
-<tr class="row-even"><td><strong>M</strong></td>
-<td>Mass Position Seismometer</td>
+<tr class="row-even"><td><p><strong>M</strong></p></td>
+<td><p>Mass Position Seismometer</p></td>
 </tr>
-<tr class="row-odd"><td><strong>N</strong></td>
-<td>Accelerometer</td>
+<tr class="row-odd"><td><p><strong>N</strong></p></td>
+<td><p>Accelerometer</p></td>
 </tr>
 </tbody>
 </table>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="20%" />
-<col width="80%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Z</strong>, <strong>N</strong>, <strong>E</strong></td>
-<td>Traditional (Vertical, North-South, East-West), when with 5 degrees of true directions</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>Z</strong>, <strong>N</strong>, <strong>E</strong></p></td>
+<td><p>Traditional (Vertical, North-South, East-West), when with 5 degrees of true directions</p></td>
 </tr>
-<tr class="row-even"><td><strong>A</strong>, <strong>B</strong>, <strong>C</strong></td>
-<td>Triaxial (Along the edges of a cube turned up on a corner)</td>
+<tr class="row-even"><td><p><strong>A</strong>, <strong>B</strong>, <strong>C</strong></p></td>
+<td><p>Triaxial (Along the edges of a cube turned up on a corner)</p></td>
 </tr>
-<tr class="row-odd"><td><strong>T</strong>, <strong>R</strong></td>
-<td>For formed beams or rotated components (Transverse, Radial)</td>
+<tr class="row-odd"><td><p><strong>T</strong>, <strong>R</strong></p></td>
+<td><p>For formed beams or rotated components (Transverse, Radial)</p></td>
 </tr>
-<tr class="row-even"><td><strong>1</strong>, <strong>2</strong>, <strong>3</strong></td>
-<td>Orthogonal components but non traditional orientations</td>
+<tr class="row-even"><td><p><strong>1</strong>, <strong>2</strong>, <strong>3</strong></p></td>
+<td><p>Orthogonal components but non traditional orientations</p></td>
 </tr>
-<tr class="row-odd"><td><strong>U</strong>, <strong>V</strong>, <strong>W</strong></td>
-<td>Optional components</td>
+<tr class="row-odd"><td><p><strong>U</strong>, <strong>V</strong>, <strong>W</strong></p></td>
+<td><p>Optional components</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Ground motion vector</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">m/s</span></code>, <code class="docutils literal"><span class="pre">m/s**2</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s**2</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="tilt-meter">
@@ -329,7 +320,7 @@ E/W.</p>
 <p><em>Position Code</em></p>
 <p><strong>N</strong>, <strong>E</strong> - Traditional</p>
 <p>Dip/Azimuth: Ground motion vector</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">rad</span></code> (radian)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">rad</span></code> (radian)</p>
 </div></blockquote>
 </div>
 <div class="section" id="creep-meter">
@@ -349,7 +340,7 @@ arbitrary, but would be noted in the dip/azimuth.</p>
 <p><em>Position Code</em></p>
 <p>None defined</p>
 <p>Dip/Azimuth: Along the fault or wire vector</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m</span></code> (meter)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m</span></code> (meter)</p>
 </div></blockquote>
 </div>
 <div class="section" id="calibration-input">
@@ -378,34 +369,34 @@ measurements.</p>
 <p><em>Source Code</em></p>
 <p><strong>D</strong></p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="35%" />
-<col width="65%" />
+<col style="width: 35%" />
+<col style="width: 65%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>O</strong></td>
-<td>Outside</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>O</strong></p></td>
+<td><p>Outside</p></td>
 </tr>
-<tr class="row-even"><td><strong>I</strong></td>
-<td>Inside</td>
+<tr class="row-even"><td><p><strong>I</strong></p></td>
+<td><p>Inside</p></td>
 </tr>
-<tr class="row-odd"><td><strong>D</strong></td>
-<td>Down hole</td>
+<tr class="row-odd"><td><p><strong>D</strong></p></td>
+<td><p>Down hole</p></td>
 </tr>
-<tr class="row-even"><td><strong>F</strong></td>
-<td>Infrasound</td>
+<tr class="row-even"><td><p><strong>F</strong></p></td>
+<td><p>Infrasound</p></td>
 </tr>
-<tr class="row-odd"><td><strong>H</strong></td>
-<td>Hydrophone</td>
+<tr class="row-odd"><td><p><strong>H</strong></p></td>
+<td><p>Hydrophone</p></td>
 </tr>
-<tr class="row-even"><td><strong>U</strong></td>
-<td>Underground</td>
+<tr class="row-even"><td><p><strong>U</strong></p></td>
+<td><p>Underground</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">Pa</span></code> (Pascal)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">Pa</span></code> (Pascal)</p>
 </div></blockquote>
 </div>
 <div class="section" id="electronic-test-point">
@@ -419,7 +410,7 @@ seismometer. Usually for power supply voltages, or line voltages.</p>
 <p>Designate as desired, make mnemonic as possible, use numbers for test
 points, etc.</p>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">V</span></code> (Volt), <code class="docutils literal"><span class="pre">A</span></code> (Ampere), <code class="docutils literal"><span class="pre">Hz</span></code> (Hertz), etc.</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">V</span></code> (Volt), <code class="docutils literal notranslate"><span class="pre">A</span></code> (Ampere), <code class="docutils literal notranslate"><span class="pre">Hz</span></code> (Hertz), etc.</p>
 </div></blockquote>
 </div>
 <div class="section" id="magnetometer">
@@ -441,7 +432,7 @@ total intensity. So, these would not have any dip/ azimuth.</p>
 <p><em>Position Code</em></p>
 <p><strong>Z</strong>, <strong>N</strong>, <strong>E</strong> - Magnetic</p>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">T</span></code> (Tesla)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">T</span></code> (Tesla)</p>
 </div></blockquote>
 </div>
 <div class="section" id="humidity">
@@ -452,31 +443,31 @@ may also be needed for meaningful results.</p>
 <p><em>Source Code</em></p>
 <p><strong>I</strong></p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="37%" />
-<col width="63%" />
+<col style="width: 37%" />
+<col style="width: 63%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>O</strong></td>
-<td>Outside environment</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>O</strong></p></td>
+<td><p>Outside environment</p></td>
 </tr>
-<tr class="row-even"><td><strong>I</strong></td>
-<td>Inside building</td>
+<tr class="row-even"><td><p><strong>I</strong></p></td>
+<td><p>Inside building</p></td>
 </tr>
-<tr class="row-odd"><td><strong>D</strong></td>
-<td>Down hole</td>
+<tr class="row-odd"><td><p><strong>D</strong></p></td>
+<td><p>Down hole</p></td>
 </tr>
-<tr class="row-even"><td><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong></td>
-<td>Cabinet sources</td>
+<tr class="row-even"><td><p><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong></p></td>
+<td><p>Cabinet sources</p></td>
 </tr>
-<tr class="row-odd"><td>–</td>
-<td>All other letters for mnemonic source types.</td>
+<tr class="row-odd"><td><p>–</p></td>
+<td><p>All other letters for mnemonic source types.</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">%</span></code> (Percent)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">%</span></code> (Percent)</p>
 </div></blockquote>
 </div>
 <div class="section" id="rotational-sensor">
@@ -488,35 +479,35 @@ may also be needed for meaningful results.</p>
 <p><em>Source Code</em></p>
 <p><strong>J</strong> - High Gain Seismometer</p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="28%" />
-<col width="72%" />
+<col style="width: 28%" />
+<col style="width: 72%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>Z</strong>, <strong>N</strong>, <strong>E</strong></td>
-<td>Traditional (Vertical, North-South, East-West)</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>Z</strong>, <strong>N</strong>, <strong>E</strong></p></td>
+<td><p>Traditional (Vertical, North-South, East-West)</p></td>
 </tr>
-<tr class="row-even"><td><strong>A</strong>, <strong>B</strong>, <strong>C</strong></td>
-<td>Triaxial (Along the edges of a cube turned up on a corner)</td>
+<tr class="row-even"><td><p><strong>A</strong>, <strong>B</strong>, <strong>C</strong></p></td>
+<td><p>Triaxial (Along the edges of a cube turned up on a corner)</p></td>
 </tr>
-<tr class="row-odd"><td><strong>T</strong>, <strong>R</strong></td>
-<td>For formed beams (Transverse, Radial)</td>
+<tr class="row-odd"><td><p><strong>T</strong>, <strong>R</strong></p></td>
+<td><p>For formed beams (Transverse, Radial)</p></td>
 </tr>
-<tr class="row-even"><td><strong>Z</strong>, <strong>1</strong>, <strong>2</strong></td>
-<td>Orthogonal components, but non traditional horizontal orientations</td>
+<tr class="row-even"><td><p><strong>Z</strong>, <strong>1</strong>, <strong>2</strong></p></td>
+<td><p>Orthogonal components, but non traditional horizontal orientations</p></td>
 </tr>
-<tr class="row-odd"><td><strong>1</strong>, <strong>2</strong>, <strong>3</strong></td>
-<td>Orthogonal components, but non traditional orientations</td>
+<tr class="row-odd"><td><p><strong>1</strong>, <strong>2</strong>, <strong>3</strong></p></td>
+<td><p>Orthogonal components, but non traditional orientations</p></td>
 </tr>
-<tr class="row-even"><td><strong>U</strong>, <strong>V</strong>, <strong>W</strong></td>
-<td>Optional components</td>
+<tr class="row-even"><td><p><strong>U</strong>, <strong>V</strong>, <strong>W</strong></p></td>
+<td><p>Optional components</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Axis about which rotation is measured following
 right-handed rule.</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">rad</span></code>, <code class="docutils literal"><span class="pre">rad/s</span></code>, <code class="docutils literal"><span class="pre">rad/s**2</span></code> – following right-handed rule</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">rad</span></code>, <code class="docutils literal notranslate"><span class="pre">rad/s</span></code>, <code class="docutils literal notranslate"><span class="pre">rad/s**2</span></code> – following right-handed rule</p>
 </div></blockquote>
 </div>
 <div class="section" id="temperature">
@@ -525,50 +516,50 @@ right-handed rule.</p>
 <div><p>Measurement of the temperature at some location. Typically used for
 measuring:</p>
 <ol class="arabic simple">
-<li>Weather</li>
+<li><p>Weather</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li>Outside temperature</li>
+<li><p>Outside temperature</p></li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>State of Health</li>
+<li><p>State of Health</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li>Inside recording building</li>
-<li>Down hole</li>
-<li>Inside electronics</li>
+<li><p>Inside recording building</p></li>
+<li><p>Down hole</p></li>
+<li><p>Inside electronics</p></li>
 </ul>
 </div></blockquote>
 <p><em>Source Code</em></p>
 <p><strong>K</strong></p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="37%" />
-<col width="63%" />
+<col style="width: 37%" />
+<col style="width: 63%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>O</strong></td>
-<td>Outside environment</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>O</strong></p></td>
+<td><p>Outside environment</p></td>
 </tr>
-<tr class="row-even"><td><strong>I</strong></td>
-<td>Inside building</td>
+<tr class="row-even"><td><p><strong>I</strong></p></td>
+<td><p>Inside building</p></td>
 </tr>
-<tr class="row-odd"><td><strong>D</strong></td>
-<td>Down hole</td>
+<tr class="row-odd"><td><p><strong>D</strong></p></td>
+<td><p>Down hole</p></td>
 </tr>
-<tr class="row-even"><td><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong></td>
-<td>Cabinet sources</td>
+<tr class="row-even"><td><p><strong>1</strong>, <strong>2</strong>, <strong>3</strong>, <strong>4</strong></p></td>
+<td><p>Cabinet sources</p></td>
 </tr>
-<tr class="row-odd"><td>–</td>
-<td>All other letters for mnemonic source types.</td>
+<tr class="row-odd"><td><p>–</p></td>
+<td><p>All other letters for mnemonic source types.</p></td>
 </tr>
 </tbody>
 </table>
-<p>Signal Units: <code class="docutils literal"><span class="pre">degC</span></code>, <code class="docutils literal"><span class="pre">°C</span></code>, <code class="docutils literal"><span class="pre">K</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">degC</span></code>, <code class="docutils literal notranslate"><span class="pre">°C</span></code>, <code class="docutils literal notranslate"><span class="pre">K</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="water-current">
@@ -582,10 +573,10 @@ locations.</p>
 <p><em>Position Code</em></p>
 <p>None defined</p>
 <p>Dip/Azimuth: Along current direction</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m/s</span></code> (meter/second)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m/s</span></code> (meter/second)</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The special, administrative channel codes of <strong>L_O_G</strong> and
+<p class="admonition-title">Note</p>
+<p>The special, administrative channel codes of <strong>L_O_G</strong> and
 <strong>S_O_H</strong> (deprecated) do not denote water current and should be
 avoided when using the “O” Source Code.</p>
 </div>
@@ -601,7 +592,7 @@ higher.</p>
 <p><em>Position Code</em></p>
 <p><strong>Z</strong>, <strong>N</strong>, <strong>E</strong> - Traditional</p>
 <p>Dip/Azimuth: Ground Motion Vector</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">m/s</span></code>, <code class="docutils literal"><span class="pre">m/s**2</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s**2</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="electric-potential">
@@ -616,7 +607,7 @@ one parameter that must be measured.</p>
 <p><em>Position Code</em></p>
 <p>None defined</p>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">V</span></code> (Volt)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">V</span></code> (Volt)</p>
 </div></blockquote>
 </div>
 <div class="section" id="rainfall">
@@ -641,7 +632,7 @@ they decrease.</p>
 <p><em>Position Code</em></p>
 <p><strong>Z</strong>, <strong>N</strong>, <strong>E</strong> - Vertical, North-South, East-West</p>
 <p>Dip/Azimuth: Along axis of measurement</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m/m</span></code> (meter per meter)</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m/m</span></code> (meter per meter)</p>
 </div></blockquote>
 </div>
 <div class="section" id="tide">
@@ -654,7 +645,7 @@ with lunar tidal filters or gravimeter output.</p>
 <p><em>Position Code</em></p>
 <p><strong>Z</strong> - Always vertical</p>
 <p>Dip/Azimuth: Always vertical</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m</span></code> (meter) - Relative to sea level or local ocean depth</p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m</span></code> (meter) - Relative to sea level or local ocean depth</p>
 </div></blockquote>
 </div>
 <div class="section" id="bolometer">
@@ -677,7 +668,7 @@ astronomy to determine observability of the sky.</p>
 <p><em>Position Code</em></p>
 <p>None defined</p>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m**3/m**3</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m**3/m**3</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="wind">
@@ -688,22 +679,22 @@ azimuth does not apply.</p>
 <p><em>Source Code</em></p>
 <p><strong>W</strong></p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="9%" />
-<col width="91%" />
+<col style="width: 9%" />
+<col style="width: 91%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>S</strong></td>
-<td>Windspeed</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>S</strong></p></td>
+<td><p>Windspeed</p></td>
 </tr>
-<tr class="row-even"><td><strong>D</strong></td>
-<td>Wind direction vector, relative to geographic north</td>
+<tr class="row-even"><td><p><strong>D</strong></p></td>
+<td><p>Wind direction vector, relative to geographic north</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Not applicable</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m/s</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m/s</span></code></p>
 </div></blockquote>
 </div>
 <div class="section" id="derived-or-generated-channel">
@@ -712,8 +703,8 @@ azimuth does not apply.</p>
 <div><p>Time series derived from observational data or entirely generated by
 a computer.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This code is deprecated.  If no other <em>Source code</em> is
+<p class="admonition-title">Warning</p>
+<p>This code is deprecated.  If no other <em>Source code</em> is
 applicable, a new code should be requested and allocated by the
 FDSN.</p>
 </div>
@@ -740,8 +731,8 @@ web site (<a class="reference external" href="http://www.fdsn.org/x-instrument/"
 <div><p>For instruments not specifically covered by an existing Source Code
 the Y Source Code can be used.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">This code is deprecated.  If no other <em>Source code</em> is
+<p class="admonition-title">Warning</p>
+<p>This code is deprecated.  If no other <em>Source code</em> is
 applicable, a new code should be requested and allocated by the
 FDSN.</p>
 </div>
@@ -766,31 +757,31 @@ fully describes the instrumentation.</p>
 <p><em>Source Code</em></p>
 <p><strong>Z</strong></p>
 <p><em>Position Code</em></p>
-<table border="1" class="docutils align-left">
+<table class="docutils align-left">
 <colgroup>
-<col width="9%" />
-<col width="91%" />
+<col style="width: 9%" />
+<col style="width: 91%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><strong>I</strong></td>
-<td>Incoherent beam</td>
+<tbody>
+<tr class="row-odd"><td><p><strong>I</strong></p></td>
+<td><p>Incoherent beam</p></td>
 </tr>
-<tr class="row-even"><td><strong>C</strong></td>
-<td>Coherent beam</td>
+<tr class="row-even"><td><p><strong>C</strong></p></td>
+<td><p>Coherent beam</p></td>
 </tr>
-<tr class="row-odd"><td><strong>F</strong></td>
-<td>FK beam</td>
+<tr class="row-odd"><td><p><strong>F</strong></p></td>
+<td><p>FK beam</p></td>
 </tr>
-<tr class="row-even"><td><strong>O</strong></td>
-<td>Origin beam</td>
+<tr class="row-even"><td><p><strong>O</strong></p></td>
+<td><p>Origin beam</p></td>
 </tr>
-<tr class="row-odd"><td><strong>D</strong></td>
-<td>Wind direction vector, relative to geographic north</td>
+<tr class="row-odd"><td><p><strong>D</strong></p></td>
+<td><p>Wind direction vector, relative to geographic north</p></td>
 </tr>
 </tbody>
 </table>
 <p>Dip/Azimuth: Ground motion vector</p>
-<p>Signal Units: <code class="docutils literal"><span class="pre">m</span></code>, <code class="docutils literal"><span class="pre">m/s</span></code>, <code class="docutils literal"><span class="pre">m/s**2</span></code></p>
+<p>Signal Units: <code class="docutils literal notranslate"><span class="pre">m</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s</span></code>, <code class="docutils literal notranslate"><span class="pre">m/s**2</span></code></p>
 </div></blockquote>
 </div>
 </div>
@@ -798,6 +789,7 @@ fully describes the instrumentation.</p>
 
 
           </div>
+          
         </div>
       </div>
     <div class="clearer"></div>

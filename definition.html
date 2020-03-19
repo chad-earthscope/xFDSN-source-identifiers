@@ -1,26 +1,17 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Definition of identifiers &#8212; Specification</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -29,26 +20,44 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Definition of identifiers</a><ul>
-<li><a class="reference internal" href="#identifiers-as-a-urn">Identifiers as a URN</a></li>
-<li><a class="reference internal" href="#temporary-network-codes-convention">Temporary network codes convention</a><ul>
-<li><a class="reference internal" href="#transitional-mapping-of-previously-allocated-temporary-network-codes">Transitional mapping of previously allocated temporary network codes</a></li>
+<p class="logo">
+  <a href="index.html">
+    <img class="logo" src="_static/FDSN-Logo-600w.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">xFDSN Source Identifiers</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Definition of identifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#identifiers-as-a-urn">Identifiers as a URN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#temporary-network-codes-convention">Temporary network codes convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#location-code-usage">Location code usage</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#location-code-usage">Location code usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="channel-codes.html">Channel codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
 </ul>
-</li>
-</ul>
+
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
@@ -58,27 +67,30 @@
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/definition.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="definition-of-identifiers">
@@ -89,13 +101,13 @@ channel is further subdivided into <strong>band</strong>, <strong>source</strong
 <strong>position</strong> codes. Each of these codes must be composed of the
 following ASCII character sets:</p>
 <ul class="simple">
-<li>Uppercase [A-Z], ASCII 65 through 90</li>
-<li>Numeric [0-9], ASCII 48 through 57</li>
+<li><p>Uppercase [A-Z], ASCII 65 through 90</p></li>
+<li><p>Numeric [0-9], ASCII 48 through 57</p></li>
 </ul>
 <p>The station and location codes may further be composed of the following
 ASCII character:</p>
 <ul class="simple">
-<li>Dash “-”, ASCII 45</li>
+<li><p>Dash “-”, ASCII 45</p></li>
 </ul>
 <p>The codes are further defined as follows:</p>
 <blockquote>
@@ -125,23 +137,23 @@ the data source.</p>
 location, band, source and position codes into a Uniform Resource Name
 (URN) as defined by <a class="reference external" href="https://www.ietf.org/rfc/rfc3986">RFC 3986</a>.
 The pattern of the source identifier URN is as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">band</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">band</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>where the network, station and source codes are required to be
 non-empty. The underscore (ASCII 95) delimiters must always be present.</p>
 <p>Example identifiers:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="n">IU_COLA_00_B_H_Z</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="n">IU_COLA_00_B_H_Z</span>
 </pre></div>
 </div>
 <p>where network=IU, station=COLA, location=00 and channel=B_H_Z</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="n">NL_HGN__L_H_Z</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="n">NL_HGN__L_H_Z</span>
 </pre></div>
 </div>
 <p>where network=NL, station=HGN, location is empty and channel=L_H_Z</p>
-<p>The <code class="docutils literal"><span class="pre">XFDSN:</span></code> portion is a namespace identifier reserved to identify this
+<p>The <code class="docutils literal notranslate"><span class="pre">XFDSN:</span></code> portion is a namespace identifier reserved to identify this
 specification.</p>
-<p>The formal <code class="docutils literal"><span class="pre">urn:</span></code> URI scheme prefix is not included in source
+<p>The formal <code class="docutils literal notranslate"><span class="pre">urn:</span></code> URI scheme prefix is not included in source
 identifiers within FDSN formats as they are already identified as
 URNs.</p>
 </div>
@@ -150,10 +162,10 @@ URNs.</p>
 <p>Network codes for deployments that are known to be temporary are
 strongly encouraged to include the 4-digit start year of the deployment
 at the end of the code with the following pattern:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="mi">1</span><span class="o">-</span><span class="mi">4</span> <span class="n">characters</span><span class="o">&gt;&lt;</span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span> <span class="n">start</span> <span class="n">year</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="mi">1</span><span class="o">-</span><span class="mi">4</span> <span class="n">characters</span><span class="o">&gt;&lt;</span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span> <span class="n">start</span> <span class="n">year</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>For example, <code class="docutils literal"><span class="pre">SEIS2018</span></code> would be a valid network code and imply that the
+<p>For example, <code class="docutils literal notranslate"><span class="pre">SEIS2018</span></code> would be a valid network code and imply that the
 initial deployment was in the year 2018 and is temporary.</p>
 <div class="section" id="transitional-mapping-of-previously-allocated-temporary-network-codes">
 <h3>Transitional mapping of previously allocated temporary network codes<a class="headerlink" href="#transitional-mapping-of-previously-allocated-temporary-network-codes" title="Permalink to this headline">¶</a></h3>
@@ -164,11 +176,11 @@ different years and are therefore not globally unique. A data owner or
 delegate data center may wish to convert, or provide an alias, for data
 using the older, 2-character codes. The mapping from the 2-character
 codes is strongly recommended to follow this pattern:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">-</span><span class="n">character</span> <span class="n">code</span><span class="o">&gt;&lt;</span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span> <span class="n">start</span> <span class="n">year</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="mi">2</span><span class="o">-</span><span class="n">character</span> <span class="n">code</span><span class="o">&gt;&lt;</span><span class="mi">4</span><span class="o">-</span><span class="n">digit</span> <span class="n">start</span> <span class="n">year</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>For example, a network deployment allocated a network code of <code class="docutils literal"><span class="pre">XA</span></code>
-operating in the years 2002 and 2003 could be mapped to <code class="docutils literal"><span class="pre">XA2002</span></code>.</p>
+<p>For example, a network deployment allocated a network code of <code class="docutils literal notranslate"><span class="pre">XA</span></code>
+operating in the years 2002 and 2003 could be mapped to <code class="docutils literal notranslate"><span class="pre">XA2002</span></code>.</p>
 <p>A temporary network operator may wish to request a 6 character network
 code in the transitional mapping pattern above in order have a globally
 unique code that is also usable with miniSEED 2 through the mapping.</p>
@@ -188,6 +200,7 @@ meaningful location code values.</p>
 
 
           </div>
+          
         </div>
       </div>
     <div class="clearer"></div>

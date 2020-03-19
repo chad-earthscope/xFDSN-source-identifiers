@@ -1,26 +1,17 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>xFDSN Source Identifiers &#8212; Specification</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.1.0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -28,14 +19,40 @@
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
+  
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
-  </head>
-  <body>
+  </head><body>
   <div class="document">
     
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/FDSN-Logo-600w.png" alt="Logo"/>
+    
+    <h1 class="logo logo-name">xFDSN Source Identifiers</h1>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="definition.html">Definition of identifiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="channel-codes.html">Channel codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a></li>
+</ul>
+
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="#">Documentation overview</a><ul>
@@ -43,27 +60,30 @@
   </ul></li>
 </ul>
 </div>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
     </form>
+    </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
         </div>
       </div>
       <div class="documentwrapper">
         <div class="bodywrapper">
+          
+
           <div class="body" role="main">
             
   <div class="section" id="xfdsn-source-identifiers">
@@ -79,7 +99,7 @@ and <cite>channel</cite> codes, where the channel code is further subdivided int
 <p>This specification defines the meaning and rules for these codes in
 addition to how they are to be combined into a URI-like pattern as
 follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">band</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">band</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This single-string identifier uniquely identifies a source in FDSN
@@ -105,12 +125,13 @@ formats and services.</p>
 </ul>
 </div>
 <ul class="simple">
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 
 
           </div>
+          
         </div>
       </div>
     <div class="clearer"></div>
