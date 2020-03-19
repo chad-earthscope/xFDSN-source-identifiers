@@ -19,13 +19,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-        with:
-          fetch-depth: 1
+      - uses: actions/checkout@v2
       - name: Install Sphinx dependencies
         run: sudo apt-get install python3-sphinx latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
       - name: Build Sphinx docs
-        run: make html
+        run: |
+          cwd
+          ls -l
+          make html
       - name: Commit documentation changes
         run: |
           git clone https://github.com/${{ github.repository }}.git --branch gh-pages --single-branch gh-pages
