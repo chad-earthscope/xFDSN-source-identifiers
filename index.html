@@ -1,0 +1,134 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>xFDSN Source Identifiers &#8212; Specification</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Definition of identifiers" href="definition.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="definition.html" title="next chapter">Definition of identifiers</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="xfdsn-source-identifiers">
+<h1>xFDSN Source Identifiers<a class="headerlink" href="#xfdsn-source-identifiers" title="Permalink to this headline">¶</a></h1>
+<p>This specification defines the construction of unique identifiers for
+data sources exchanged and archived in formats and services defined by
+the <a class="reference external" href="http://www.fdsn.org/">International Federation of Digital Seismograph Networks</a> (FDSN) and related services and formats.</p>
+<p>The FDSN defines, allocates and adopts a number of codes that, when
+combined in a hierarchy, uniquely identify a data source.  The
+identifer is constructed by combining <cite>network</cite>, <cite>station</cite>, <cite>location</cite>
+and <cite>channel</cite> codes, where the channel code is further subdivided into
+<cite>band</cite>, <cite>source</cite> and <cite>position</cite> codes.</p>
+<p>This specification defines the meaning and rules for these codes in
+addition to how they are to be combined into a URI-like pattern as
+follows:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">XFDSN</span><span class="p">:</span><span class="o">&lt;</span><span class="n">network</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">station</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">location</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">band</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">source</span><span class="o">&gt;</span><span class="n">_</span><span class="o">&lt;</span><span class="n">position</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>This single-string identifier uniquely identifies a source in FDSN
+formats and services.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="definition.html">Definition of identifiers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="definition.html#identifiers-as-a-urn">Identifiers as a URN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="definition.html#temporary-network-codes-convention">Temporary network codes convention</a></li>
+<li class="toctree-l2"><a class="reference internal" href="definition.html#location-code-usage">Location code usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="channel-codes.html">Channel codes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="channel-codes.html#band-source-and-position-codes">Band, source and position codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channel-codes.html#band-code">Band Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channel-codes.html#source-and-position-codes">Source and Position Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="background.html#changes-from-seed-2-4">Changes from SEED 2.4</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<ul class="simple">
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, <A href="https://www.fdsn.org/">FDSN</A>.
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/FDSN/xFDSN-source-identifiers" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>
