@@ -16,12 +16,14 @@ on:
       - master
 
 jobs:
-  build:
+  build-docs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Sphinx dependencies
-        run: sudo apt-get install python3-sphinx latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        run: |
+          sudo apt-get install python3-pip latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+          sudo pip3 install sphinx
       - name: Build Sphinx docs
         run: |
           ls -l
