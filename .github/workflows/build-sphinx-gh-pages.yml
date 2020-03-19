@@ -24,8 +24,8 @@ jobs:
         run: sudo apt-get install python3-sphinx latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
       - name: Build Sphinx docs
         run: |
-          cwd
           ls -l
+          pwd
           make html
       - name: Commit documentation changes
         run: |
