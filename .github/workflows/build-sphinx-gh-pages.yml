@@ -29,7 +29,7 @@ jobs:
           ls -l
           pwd
           sphinx-build --version
-          make html
+          make html latexpdf
       - name: Fetch gh-pages branch
         uses: actions/checkout@v2
         with:
