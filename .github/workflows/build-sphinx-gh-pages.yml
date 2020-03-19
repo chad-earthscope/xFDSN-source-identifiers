@@ -23,7 +23,7 @@ jobs:
         with:
           fetch-depth: 1
       - name: Install Sphinx dependencies
-        run: sudo apt-get install sphinx-doc latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        run: sudo apt-get install python3-sphinx latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
       - name: Build Sphinx docs
         run: make html
       - name: Commit documentation changes
