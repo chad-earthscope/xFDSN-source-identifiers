@@ -26,6 +26,7 @@ jobs:
         run: |
           ls -l
           pwd
+          sphinx-build --version
           make html
       - name: Commit documentation changes
         run: |
